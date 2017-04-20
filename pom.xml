@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>cn.ms</groupId>
+		<artifactId>ms-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>ms-micro</artifactId>
+	<name>The MS Micro</name>
+	<description>The MS Micro</description>
+
+	<properties>
+		<guava>20.0</guava>
+		<disruptor>3.3.6</disruptor>
+		<commons-lang3>3.1</commons-lang3>
+		<commons-beanutils>1.9.3</commons-beanutils>
+		<commons-configuration2>2.1.1</commons-configuration2>
+
+		<slf4j-api>1.7.23</slf4j-api>
+	</properties>
+
+	<dependencies>
+		<!-- Third Party Dependence -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.lmax</groupId>
+			<artifactId>disruptor</artifactId>
+			<version>${disruptor}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>${commons-beanutils}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-configuration2</artifactId>
+			<version>${commons-configuration2}</version>
+		</dependency>
+
+		<!-- Log Facade -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-api}</version>
+		</dependency>
+	</dependencies>
+
+</project>

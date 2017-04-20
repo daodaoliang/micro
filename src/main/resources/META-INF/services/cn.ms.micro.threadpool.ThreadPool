@@ -1,0 +1,3 @@
+cn.ms.micro.threadpool.support.CachedThreadPool
+cn.ms.micro.threadpool.support.FixedThreadPool
+cn.ms.micro.threadpool.support.LimitedThreadPool
