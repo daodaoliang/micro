@@ -5,8 +5,9 @@
 	<groupId>cn.ms</groupId>
 	<artifactId>micro</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>The MS Micro</name>
-	<description>The MS Micro</description>
+
+	<name>The Micro Service Center</name>
+	<description>The Micro Service Center</description>
 
 	<properties>
 		<guava.version>20.0</guava.version>
@@ -37,13 +38,13 @@
 			<version>${fastjson.version}</version>
 		</dependency>
 
-		<!-- LOG + SLF4J Facade -->
+		<!-- Log SLF4J Facade -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j-api.version}</version>
 		</dependency>
-		
+
 
 		<!-- Test -->
 		<dependency>
