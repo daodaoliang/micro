@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cn.ms.micro.common.exception.MicroException;
 import cn.ms.micro.extension.ExtensionLoader;
 import cn.ms.micro.extension.SpiMeta;
 import cn.ms.micro.status.Status;
@@ -22,7 +21,7 @@ public class StatusService {
 	public static StatusChecker getStatusChecker(String name) {
 		StatusChecker service = ExtensionLoader.getExtensionLoader(StatusChecker.class).getExtension(name);
 		if (null == service) {
-			throw new MicroException("No found statusChecker log service.");
+			throw new IllegalArgumentException("No found statusChecker log service.");
 		}
 
 		return service;

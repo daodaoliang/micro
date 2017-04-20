@@ -19,8 +19,6 @@ import java.util.concurrent.ConcurrentMap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cn.ms.micro.common.exception.MicroException;
-
 /**
  * <pre>
  * 	扩展增加的方式：
@@ -308,7 +306,7 @@ public class ExtensionLoader<T> {
                 parseUrl(type, url, classNames);
             }
         } catch (Exception e) {
-            throw new MicroException("ExtensionLoader loadExtensionClasses error, prefix: " + prefix + " type: " + type.getClass(), e);
+            throw new RuntimeException("ExtensionLoader loadExtensionClasses error, prefix: " + prefix + " type: " + type.getClass(), e);
         }
 
         return loadClass(classNames);
@@ -426,11 +424,11 @@ public class ExtensionLoader<T> {
     }
 
     private static <T> void failThrows(Class<T> type, String msg, Throwable cause) {
-        throw new MicroException(type.getName() + ": " + msg, cause);
+        throw new RuntimeException(type.getName() + ": " + msg, cause);
     }
 
     private static <T> void failThrows(Class<T> type, String msg) {
-        throw new MicroException(type.getName() + ": " + msg);
+        throw new RuntimeException(type.getName() + ": " + msg);
     }
 
     private static <T> void failThrows(Class<T> type, URL url, int line, String msg) throws ServiceConfigurationError {

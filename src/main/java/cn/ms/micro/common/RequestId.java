@@ -38,9 +38,4 @@ public class RequestId {
         return (currentTime << BITS) + count;
     }
 
-    public static long getRequestIdFromClient() {
-        // TODO 上下文 requestid
-        return 0;
-    }
-
 }
