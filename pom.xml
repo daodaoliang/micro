@@ -11,17 +11,12 @@
 	<properties>
 		<guava.version>20.0</guava.version>
 		<disruptor.version>3.3.6</disruptor.version>
+		<fastjson.version>1.2.31</fastjson.version>
+
 		<slf4j-api.version>1.7.25</slf4j-api.version>
-		<log4j2.version>2.6.2</log4j2.version>
+
 		<junit.version>4.12</junit.version>
 		<easymock.version>3.4</easymock.version>
-
-
-		<commons-lang3>3.1</commons-lang3>
-		<commons-beanutils>1.9.3</commons-beanutils>
-		<commons-configuration2>2.1.1</commons-configuration2>
-
-		<slf4j-api>1.7.23</slf4j-api>
 	</properties>
 
 	<dependencies>
@@ -36,13 +31,19 @@
 			<artifactId>disruptor</artifactId>
 			<version>${disruptor.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
 
-		<!-- Log Facade -->
+		<!-- LOG + SLF4J Facade -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>${slf4j-api}</version>
+			<version>${slf4j-api.version}</version>
 		</dependency>
+		
 
 		<!-- Test -->
 		<dependency>
