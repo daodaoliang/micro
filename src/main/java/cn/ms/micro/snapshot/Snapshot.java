@@ -27,19 +27,22 @@ public class Snapshot {
 
 	// 获取当前工程路径
 	private String PATH_ID = UUID.randomUUID().toString();
-	
+
 	private DiskLruCache diskLruCache;
 
 	/**
-	 * System.getProperty("user.home") /.snapshot/MD5(PATH)/<font color="red">snapshotName</font> .snapshot"
+	 * System.getProperty("user.home") /.snapshot/MD5(PATH)/<font
+	 * color="red">snapshotName</font> .snapshot"
 	 */
 	public Snapshot(String snapshotName) {
 		try {
-			SNAPSHOT_PATH = System.getProperty("user.home") + "/.snapshot/" + PATH_ID + "/" + snapshotName + ".snapshot";
+			SNAPSHOT_PATH = System.getProperty("user.home") + "/.snapshot/"
+					+ PATH_ID + "/" + snapshotName + ".snapshot";
 			logger.info("Snapshot store file: " + SNAPSHOT_PATH);
-			
+
 			SNAPSHOT_FILE = new File(SNAPSHOT_PATH);
-			diskLruCache = DiskLruCache.open(SNAPSHOT_FILE, APP_VERSION, VALUE_COUNT, Integer.MAX_VALUE);
+			diskLruCache = DiskLruCache.open(SNAPSHOT_FILE, APP_VERSION,
+					VALUE_COUNT, Integer.MAX_VALUE);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -48,7 +51,7 @@ public class Snapshot {
 	public File getSnapshotFile() {
 		return SNAPSHOT_FILE;
 	}
-	
+
 	public void put(String key, String data) {
 		try {
 			DiskLruCache.Editor creator = diskLruCache.edit(key);
@@ -58,11 +61,11 @@ public class Snapshot {
 			logger.error("Put Snapshot is failure", e);
 		}
 	}
-	
+
 	public void put(String key, Object obj) {
 		this.put(key, JSON.toJSONString(obj));
 	}
-	
+
 	public String getString(String key) {
 		try {
 			DiskLruCache.Snapshot snapshot = diskLruCache.get(key);
@@ -72,15 +75,15 @@ public class Snapshot {
 			return null;
 		}
 	}
-	
+
 	public <T> T getObj(String key, Class<T> clazz) {
 		return JSON.parseObject(this.getString(key), clazz);
 	}
-	
+
 	public <T> List<T> getArrayObj(String key, Class<T> clazz) {
 		return JSON.parseArray(this.getString(key), clazz);
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	public Map<String, Object> getMap(String key) {
 		return JSON.parseObject(this.getString(key), Map.class);
