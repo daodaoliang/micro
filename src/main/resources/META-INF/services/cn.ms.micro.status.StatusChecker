@@ -1,2 +1,2 @@
-cn.ms.micro.status.support.LoadStatusChecker
-cn.ms.micro.status.support.MemoryStatusChecker
+cn.ms.micro.status.LoadStatusChecker
+cn.ms.micro.status.MemoryStatusChecker
