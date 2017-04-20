@@ -2,39 +2,17 @@
 
 致力于解决各类分布式基础设施或微服务应用的核心机制,包括数据模型、扩展机制、插件机制等。
 
-+ DataModle
-	+ EURL
-	+ CURL
-	+ Store
-	+ Stack
-	+ MultiHashMap
-	+ ConcurrentHashSet
-+ Utils
-+ SPI
-+ Logger
-+ Metric
-	+ Cache
-	+ DataStore
-	+ Plugin
-	+ Micro
-		+ Conf
-		+ FileLock
-		+ Perf
-		+ Sequence
-		+ Snapshot
-		+ SystemClock
-+ Status
-+ Switcher
-+ ThreadPool
-
 
 ##1 数据模型(CURL/EURL)
 主要用于解决分布式基础组件中常用的数据模型定义。
 
-+ CURL：基于Motan中URL进行升级后的数据模型。
-+ EURL：基于Dubbo(Dubbox)中URL进行升级后的数据模型。
-+ Store：KV型模型
++ Perf：性能测试工具
++ MultiHashMap：三元Map
 + ConcurrentHashSet：高并发安全Set
++ MicroId：基于AtomicLong算法的ID生成器
++ Snowflake：基于Snowflake算法的高性能ID生成器
++ URL：基于Dubbo(Dubbox)中URL进行升级后的数据模型
++ SystemClock：高并发场景下System.currentTimeMillis()的性能问题的优化
 
 ##2 SPI机制(@Spi)
 + 支持SPI扩展(类似于JDK SPI的加强版)
