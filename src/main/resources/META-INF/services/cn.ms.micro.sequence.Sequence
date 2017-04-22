@@ -1,0 +1,3 @@
+cn.ms.micro.sequence.MicroSequence
+cn.ms.micro.sequence.SnowflakeSequence
+cn.ms.micro.sequence.UuidSequence
