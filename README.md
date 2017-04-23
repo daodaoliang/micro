@@ -1,6 +1,26 @@
-#微核心
+#微核心(Micro)
 
 致力于解决各类分布式基础设施或微服务应用的核心机制,包括数据模型、扩展机制等。
+
+## 开源产品介绍（微服务基础设施<font color="red">QQ交流群：191958521</font>）
++ 配置中心(mconf)
+
+1. GITHUB：https://github.com/yu120/mconf
+2. 码云：https://git.oschina.net/yu120/mconf
+
++ 微核心(micro)
+
+1. GITHUB：https://github.com/yu120/micro
+2. 码云：https://git.oschina.net/yu120/micro
+
++ 微服务神经元(neural)
+
+1. GITHUB：https://github.com/yu120/neural
+2. 码云：https://git.oschina.net/yu120/neural
+
++ 微序列(sequence)
+
+1. https://git.oschina.net/yu120/sequence
 
 
 ##1 数据模型(CURL/EURL)
