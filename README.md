@@ -1,4 +1,4 @@
-#微核心(Micro)
+# 微核心(Micro)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yu120/micro/pulls)
@@ -28,7 +28,7 @@
 1. https://git.oschina.net/yu120/sequence
 
 
-##1 数据模型(CURL/EURL)
+## 1 数据模型(CURL/EURL)
 主要用于解决分布式基础组件中常用的数据模型定义。
 
 + Perf：性能测试工具
@@ -39,20 +39,20 @@
 + URL：基于Dubbo(Dubbox)中URL进行升级后的数据模型
 + SystemClock：高并发场景下System.currentTimeMillis()的性能问题的优化
 
-##2 SPI机制(@Spi)
+## 2 SPI机制(@Spi)
 + 支持SPI扩展(类似于JDK SPI的加强版)
 + 支持SPI扩展实现的排序
 + 支持SPI扩展实现的分组
 + 支持SPI扩展实现的单例/多例模式
 
-##3 日志服务
+## 3 日志服务
 基于Slf4j实现统一的日志门面服务。
 
-##4 状态服务
+## 4 状态服务
 + LoadStatusChecker：System Load Status
 + MemoryStatusChecker：Jvm Memory Status
 
-##5 线程池服务
+## 5 线程池服务
 + CachedThreadPool：缓存线程池
 + FixedThreadPool：固定大小线程池
 + LimitedThreadPool：自动增长线程池
