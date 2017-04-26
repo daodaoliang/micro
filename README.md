@@ -1,5 +1,10 @@
 #微核心(Micro)
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yu120/micro/pulls)
+[![GitHub stars](https://img.shields.io/github/stars/yu120/micro.svg?style=social&label=Stars)](https://github.com/yu120/micro)
+[![GitHub forks](https://img.shields.io/github/forks/yu120/micro.svg?style=social&label=Fork)](https://github.com/yu120/micro)
+
 致力于解决各类分布式基础设施或微服务应用的核心机制,包括数据模型、扩展机制等。
 
 ## 开源产品介绍（微服务基础设施<font color="red">QQ交流群：191958521</font>）
