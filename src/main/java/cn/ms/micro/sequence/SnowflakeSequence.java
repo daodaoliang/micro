@@ -50,9 +50,23 @@ public class SnowflakeSequence implements Sequence {
 	
 	public synchronized Long nextId() {
 		long timestamp = timeGen();
-		if (timestamp < lastTimestamp) {
-			throw new RuntimeException(String.format("Clock moved backwards.  Refusing to generate id for %d milliseconds", lastTimestamp - timestamp));
+		if (timestamp < lastTimestamp) {//闰秒
+			long offset = lastTimestamp - timestamp;
+			if (offset <= 5) {
+				try {
+					wait(offset << 1);
+					timestamp = timeGen();
+					if (timestamp < lastTimestamp) {
+						throw new RuntimeException(String.format("Clock moved backwards.  Refusing to generate id for %d milliseconds", offset)); 
+					}
+				} catch (Exception e) {
+					throw new RuntimeException(e);
+				}
+			} else {
+				throw new RuntimeException(String.format("Clock moved backwards.  Refusing to generate id for %d milliseconds", offset));
+			}
 		}
+		
 		if (lastTimestamp == timestamp) {
 			sequence = (sequence + 1) & sequenceMask;
 			if (sequence == 0) {
